@@ -3,7 +3,13 @@ import styled from "styled-components";
 const Login = (props) => {
    return (
     <Container>
-        <Content><BgImage /></Content>
+        <Content>
+          <CTA>
+              <CTALogoOne src='/images/cta-logo-one.svg' />
+          </CTA>
+            <BgImage />
+            
+        </Content>
     </Container>
     );
 };
@@ -42,5 +48,9 @@ const BgImage = styled.div`
     left: 0;
     z-index: -1;
 `;
+
+const CTA = styled.div``;
+
+const CTALogoOne = styled.img``;
 
 export default Login;
