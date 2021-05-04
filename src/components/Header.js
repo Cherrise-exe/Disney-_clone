@@ -90,7 +90,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 36px;
-letter-spacing: 2px;
+letter-spacing: 16px;
 z-index: 3;
 `;
 
@@ -121,7 +121,7 @@ margin-right: auto;
 margin-left: 25px;
 
 a {
-display:flex;
+display: flex;
 align-items: center;
 padding: 0 12px;
 
@@ -168,9 +168,9 @@ span {
   }
 }
 
-@media (max-width: 830px){
-    display: none;
-    }
+// @media (max-width: 830px){
+//     display: none;
+//     }
 `;
 
 const Login = styled.a`
@@ -181,7 +181,6 @@ letter-spacing: 1.5px;
 border: 1px solid #f9f9f9;
 border-radius: 4px;
 transition: all .2s ease 0s;
-display: flex;
 
 &:hover {
     background-color: #f9f9f9;

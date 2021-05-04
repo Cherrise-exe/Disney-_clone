@@ -23,7 +23,7 @@ overflow: hidden;
 display: flex;
 flex-direction: column;
 text-align: center;
-height: 100vk;
+height: 100vh;
 `;
 
 const Content = styled.div`
@@ -88,7 +88,7 @@ border-radius: 4px;
 const Description = styled.p`
 color: hsla(0, 0%, 95.3%, 1);
 font-size: 11px;
-margin: 10px 0 24px;
+margin: 0 0 24px;
 line-height: 1.5;
 letter-spacing: 1.5px;
 `;
