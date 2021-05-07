@@ -7,7 +7,7 @@ import {
     selectUserName, 
     selectUserPhoto, 
     setUserLoginDetails,
-   // setSignOutState, 
+    setSignOutState, 
 } from "../features/user/userSlice";
 
 const Header = (props) => {
@@ -26,6 +26,7 @@ const Header = (props) => {
     }, [userName]);
 
     const handleAuth = () => {
+       if (!userName){
         auth
         .signInWithPopup(provider)
         .then((result) => {
@@ -34,6 +35,13 @@ const Header = (props) => {
         .catch((error) => {
             alert(error.message);
         });
+    } else if (userName){
+        auth.signOut().then(() => {
+            dispatch(setSignOutState());
+            history.push('/');
+        })
+        .catch((err) => alert(err.message));
+       }
     };
 
     const setUser = (user) => {
@@ -202,6 +210,7 @@ transition: all .2s ease 0s;
     color: #000;
     border-color: transparent;
 }
+
 `;
 
 const UserImg = styled.img`
@@ -235,7 +244,7 @@ justifiy-content: center;
 
 ${UserImg}{
     border-radius: 50%;
-  // width: 100%;
+   // width: 100%;
     height: 100%;
 }
 
