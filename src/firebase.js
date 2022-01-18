@@ -5,7 +5,6 @@ import firebase from "firebase";
 const firebaseConfig = {
   apiKey: "AIzaSyBDj3n8HMMDbvbNzlaKLWsnV51d89qr9cM",
   authDomain: "disneyplus-clone-ef561.firebaseapp.com",
-  databaseURL: "https://disneyplus-clone-ef561-default-rtdb.firebaseio.com",
   projectId: "disneyplus-clone-ef561",
   storageBucket: "disneyplus-clone-ef561.appspot.com",
   messagingSenderId: "653947941006",

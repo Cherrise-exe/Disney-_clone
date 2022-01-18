@@ -20,6 +20,7 @@ const Home = (props) => {
   let trending = [];
 
   useEffect(() => {
+    console.log("hello");
     db.collection("movies").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
         console.log(recommends);
@@ -39,14 +40,9 @@ const Home = (props) => {
           case "trending":
             trending = [...trending, { id: doc.id, ...doc.data() }];
             break;
-
-          default: 
-          (console.log("Please refresh your page."));
         }
-
-        return snapshot.docs.map((doc));
       });
-
+    });
       dispatch(
         setMovies({
           recommend: recommends,
@@ -54,19 +50,18 @@ const Home = (props) => {
           original: originals,
           trending: trending,
         })
-      );
-    });
-  }, [userName]);
+     );
+}, [userName]);
 
-  return (
-    <Container>
-      <ImgSlider />
-      <Viewers />
-      <Recommends />
-      <NewDisney />
-      <Originals />
-      <Trending />
-    </Container>
+return (
+  <Container>
+    <ImgSlider />
+    <Viewers />
+    <Recommends />
+    <NewDisney />
+    <Originals />
+    <Trending />
+  </Container>
   );
 };
 
