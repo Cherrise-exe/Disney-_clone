@@ -23,7 +23,6 @@ const Home = (props) => {
     console.log("hello");
     db.collection("movies").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
-        console.log(recommends);
         switch (doc.data().type) {
           case "recommend":
             recommends = [...recommends, { id: doc.id, ...doc.data() }];
@@ -41,16 +40,17 @@ const Home = (props) => {
             trending = [...trending, { id: doc.id, ...doc.data() }];
             break;
         }
+        dispatch(
+          setMovies({
+            recommend: recommends,
+            newDisney: newDisneys,
+            original: originals,
+            trending: trending,
+          })
+       );
       });
     });
-      dispatch(
-        setMovies({
-          recommend: recommends,
-          newDisney: newDisneys,
-          original: originals,
-          trending: trending,
-        })
-     );
+    
 }, [userName]);
 
 return (
