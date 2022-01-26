@@ -1,15 +1,17 @@
 import firebase from "firebase";
 // Import the functions you need from the SDKs you need
+require('dotenv').config()
+// hiding variables
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBDj3n8HMMDbvbNzlaKLWsnV51d89qr9cM",
-  authDomain: "disneyplus-clone-ef561.firebaseapp.com",
-  projectId: "disneyplus-clone-ef561",
-  storageBucket: "disneyplus-clone-ef561.appspot.com",
-  messagingSenderId: "653947941006",
-  appId: "1:653947941006:web:a215b4a86209d130e199df",
-  measurementId: "G-P16M22M8DM"
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID,
+  appId: process.env.APPID,
+  measurementId: process.env.MEASUREMENTID
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
