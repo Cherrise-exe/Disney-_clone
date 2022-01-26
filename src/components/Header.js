@@ -59,7 +59,7 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="/images/logo.svg" alt="Disney+" />
+        <img src="Disney-_clone/images/logo.svg" alt="Disney+" />
       </Logo>
 
       {!userName ? (
@@ -68,27 +68,27 @@ const Header = (props) => {
         <>
           <NavMenu>
             <a href="/home">
-              <img src="/images/home-icon.svg" alt="HOME" />
+              <img src="Disney-_clone/images/home-icon.svg" alt="HOME" />
               <span>HOME</span>
             </a>
             <button>
-              <img src="/images/search-icon.svg" alt="SEARCH" />
+              <img src="Disney-_clone/images/search-icon.svg" alt="SEARCH" />
               <span>SEARCH</span>
             </button>
             <button>
-              <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
+              <img src="Disney-_clone/images/watchlist-icon.svg" alt="WATCHLIST" />
               <span>WATCHLIST</span>
             </button>
             <button>
-              <img src="/images/original-icon.svg" alt="ORIGINALS" />
+              <img src="Disney-_clone/images/original-icon.svg" alt="ORIGINALS" />
               <span>ORIGINALS</span>
             </button>
             <button>
-              <img src="/images/movie-icon.svg" alt="MOVIES" />
+              <img src="Disney-_clone/images/movie-icon.svg" alt="MOVIES" />
               <span>MOVIES</span>
             </button>
             <button>
-              <img src="/images/series-icon.svg" alt="SERIES" />
+              <img src="Disney-_clone/images/series-icon.svg" alt="SERIES" />
               <span>SERIES</span>
             </button>
           </NavMenu>
